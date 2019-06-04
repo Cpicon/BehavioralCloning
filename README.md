@@ -53,17 +53,17 @@ python drive.py model.h5
 
 #### 3. Submission code is usable and readable
 
-The model.py file contains the code for training and saving the convolution neural network. The next [notebook](./DataExploration.ipynb) shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works.
+The model.py file contains the code for training and saving the convolution neural network. The next ![notebook](./DataExploration.ipynb) shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works.
 
 ### Model Architecture and Training Strategy
 
 #### 1. An appropriate model architecture has been employed
 
-[png](./README_IMAGES/model.png)
+![png](./README_IMAGES/model.png)
 
 The model consists of 3 a convolution neural network with 5x5 filter sizes and depths between 24 and 48. And 2 a convolution neural network with 3x3 filter sizes and depths of 64. Finally, the model has 3 last fully-connected layers. 
 
-The model includes ELU layers to introduce nonlinearity (see [paper](https://arxiv.org/pdf/1511.07289.pdf), and the data is normalized in the model using a Keras lambda layer. 
+The model includes ELU layers to introduce nonlinearity (see ![paper](https://arxiv.org/pdf/1511.07289.pdf), and the data is normalized in the model using a Keras lambda layer. 
 
 #### 2 Data augmented and Overfitting 
 #### 2.1 Augmented Data
@@ -88,9 +88,9 @@ The model used an adam optimizer, so the learning rate was not tuned manually. I
 
 #### 4. Appropriate training data
 
-I just examine the data given by Udacity([dataset](https://s3.amazonaws.com/video.udacity-data.com/topher/2016/December/584f6edd_data/data.zip)) and found that the data correspond to 9 laps in the first easy track. The data was pre-proccesed to get augmented data in order to generalize the model. First, the data was cropped from top because I did not wanted to distract the model with trees and sky and 25 pixels from the bottom so as to remove the dashboard that is coming in the images.
+I just examine the data given by Udacity(![dataset](https://s3.amazonaws.com/video.udacity-data.com/topher/2016/December/584f6edd_data/data.zip)) and found that the data correspond to 9 laps in the first easy track. The data was pre-proccesed to get augmented data in order to generalize the model. First, the data was cropped from top because I did not wanted to distract the model with trees and sky and 25 pixels from the bottom so as to remove the dashboard that is coming in the images.
 
-[png](./README_IMAGES/FinalModel.png)
+![png](./README_IMAGES/FinalModel.png)
 
 I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
@@ -98,4 +98,4 @@ I used this training data for training the model. The validation set helped dete
 
 #### Output Video
 
-To test the model I recurred to autonomous mode on the simulator to get the views of the car. With the images collected I used `video.py` to make a video with the images obtained. Thus, I evaluate the performance of the model. The test video can be seen [here](https://youtu.be/R3WYhg16rT0)
+To test the model I recurred to autonomous mode on the simulator to get the views of the car. With the images collected I used `video.py` to make a video with the images obtained. Thus, I evaluate the performance of the model. The test video can be seen ![here](https://youtu.be/R3WYhg16rT0)
